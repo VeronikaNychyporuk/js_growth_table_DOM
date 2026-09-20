@@ -28,7 +28,7 @@ appendRowButton.addEventListener('click', () => {
 
 removeRowButton.addEventListener('click', () => {
   if (table.rows.length > 2) {
-    table.querySelector('tr').remove();
+    table.querySelector('tr:last-child').remove();
   }
 
   if (table.rows.length === 2) {
@@ -59,7 +59,7 @@ appendColumnButton.addEventListener('click', () => {
 removeColumnButton.addEventListener('click', () => {
   if (table.rows[0].cells.length > 2) {
     [...table.rows].forEach((element) => {
-      element.querySelector('td').remove();
+      element.querySelector('td:last-child').remove();
     });
   }
 
